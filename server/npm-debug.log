@@ -1,0 +1,407 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData bcrypt
+20 silly mapToRegistry name bcrypt
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/bcrypt
+24 silly fetchNamedPackageData cors
+25 silly mapToRegistry name cors
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/cors
+29 silly fetchNamedPackageData dotenv
+30 silly mapToRegistry name dotenv
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry uri https://registry.npmjs.org/dotenv
+34 silly fetchNamedPackageData express
+35 silly mapToRegistry name express
+36 silly mapToRegistry using default registry
+37 silly mapToRegistry registry https://registry.npmjs.org/
+38 silly mapToRegistry uri https://registry.npmjs.org/express
+39 silly fetchNamedPackageData http-errors
+40 silly mapToRegistry name http-errors
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry uri https://registry.npmjs.org/http-errors
+44 silly fetchNamedPackageData jsonwebtoken
+45 silly mapToRegistry name jsonwebtoken
+46 silly mapToRegistry using default registry
+47 silly mapToRegistry registry https://registry.npmjs.org/
+48 silly mapToRegistry uri https://registry.npmjs.org/jsonwebtoken
+49 silly fetchNamedPackageData lodash
+50 silly mapToRegistry name lodash
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry uri https://registry.npmjs.org/lodash
+54 silly fetchNamedPackageData moment
+55 silly mapToRegistry name moment
+56 silly mapToRegistry using default registry
+57 silly mapToRegistry registry https://registry.npmjs.org/
+58 silly mapToRegistry uri https://registry.npmjs.org/moment
+59 silly fetchNamedPackageData mongoose
+60 silly mapToRegistry name mongoose
+61 silly mapToRegistry using default registry
+62 silly mapToRegistry registry https://registry.npmjs.org/
+63 silly mapToRegistry uri https://registry.npmjs.org/mongoose
+64 silly fetchNamedPackageData multer
+65 silly mapToRegistry name multer
+66 silly mapToRegistry using default registry
+67 silly mapToRegistry registry https://registry.npmjs.org/
+68 silly mapToRegistry uri https://registry.npmjs.org/multer
+69 silly fetchNamedPackageData pg
+70 silly mapToRegistry name pg
+71 silly mapToRegistry using default registry
+72 silly mapToRegistry registry https://registry.npmjs.org/
+73 silly mapToRegistry uri https://registry.npmjs.org/pg
+74 silly fetchNamedPackageData pg-hstore
+75 silly mapToRegistry name pg-hstore
+76 silly mapToRegistry using default registry
+77 silly mapToRegistry registry https://registry.npmjs.org/
+78 silly mapToRegistry uri https://registry.npmjs.org/pg-hstore
+79 silly fetchNamedPackageData sequelize
+80 silly mapToRegistry name sequelize
+81 silly mapToRegistry using default registry
+82 silly mapToRegistry registry https://registry.npmjs.org/
+83 silly mapToRegistry uri https://registry.npmjs.org/sequelize
+84 silly fetchNamedPackageData socket.io
+85 silly mapToRegistry name socket.io
+86 silly mapToRegistry using default registry
+87 silly mapToRegistry registry https://registry.npmjs.org/
+88 silly mapToRegistry uri https://registry.npmjs.org/socket.io
+89 silly fetchNamedPackageData uuid
+90 silly mapToRegistry name uuid
+91 silly mapToRegistry using default registry
+92 silly mapToRegistry registry https://registry.npmjs.org/
+93 silly mapToRegistry uri https://registry.npmjs.org/uuid
+94 silly fetchNamedPackageData yup
+95 silly mapToRegistry name yup
+96 silly mapToRegistry using default registry
+97 silly mapToRegistry registry https://registry.npmjs.org/
+98 silly mapToRegistry uri https://registry.npmjs.org/yup
+99 verbose request uri https://registry.npmjs.org/http-errors
+100 verbose request no auth needed
+101 info attempt registry request try #1 at 11:31:14 AM
+102 verbose request id 211ab993da01f30f
+103 verbose etag W/"8fd96535a071551ff5f1f6553f3daf48"
+104 verbose lastModified Mon, 29 Jun 2020 05:41:20 GMT
+105 http request GET https://registry.npmjs.org/http-errors
+106 verbose request uri https://registry.npmjs.org/cors
+107 verbose request no auth needed
+108 info attempt registry request try #1 at 11:31:14 AM
+109 verbose etag W/"85e94e318b6208a5217c4f2dd1c686f7"
+110 verbose lastModified Tue, 18 May 2021 17:15:01 GMT
+111 http request GET https://registry.npmjs.org/cors
+112 verbose request uri https://registry.npmjs.org/bcrypt
+113 verbose request no auth needed
+114 info attempt registry request try #1 at 11:31:14 AM
+115 verbose etag W/"98740aa602121bb7a87ac7cde2ca4572"
+116 verbose lastModified Sat, 22 May 2021 04:28:55 GMT
+117 http request GET https://registry.npmjs.org/bcrypt
+118 verbose request uri https://registry.npmjs.org/dotenv
+119 verbose request no auth needed
+120 info attempt registry request try #1 at 11:31:14 AM
+121 verbose etag W/"0eb73f315ae355ea74d076b6e3ab257b"
+122 verbose lastModified Fri, 21 May 2021 19:40:29 GMT
+123 http request GET https://registry.npmjs.org/dotenv
+124 verbose request uri https://registry.npmjs.org/jsonwebtoken
+125 verbose request no auth needed
+126 info attempt registry request try #1 at 11:31:14 AM
+127 verbose etag W/"b2f62f1a1e5b04575224f586f5bfb7a3"
+128 verbose lastModified Tue, 18 May 2021 17:15:52 GMT
+129 http request GET https://registry.npmjs.org/jsonwebtoken
+130 verbose request uri https://registry.npmjs.org/moment
+131 verbose request no auth needed
+132 info attempt registry request try #1 at 11:31:14 AM
+133 verbose etag W/"9c22f870cd1ebc640a9f8804f51d6975"
+134 verbose lastModified Sun, 28 Mar 2021 02:25:53 GMT
+135 http request GET https://registry.npmjs.org/moment
+136 verbose request uri https://registry.npmjs.org/multer
+137 verbose request no auth needed
+138 info attempt registry request try #1 at 11:31:14 AM
+139 verbose etag W/"851bfd416613de8d49e379afdc444aa2"
+140 verbose lastModified Sun, 15 Mar 2020 16:28:53 GMT
+141 http request GET https://registry.npmjs.org/multer
+142 verbose request uri https://registry.npmjs.org/lodash
+143 verbose request no auth needed
+144 info attempt registry request try #1 at 11:31:14 AM
+145 verbose etag W/"2a7211c8e0e3a1ef5c877cd340f3ae70"
+146 verbose lastModified Mon, 10 May 2021 02:21:21 GMT
+147 http request GET https://registry.npmjs.org/lodash
+148 verbose request uri https://registry.npmjs.org/pg
+149 verbose request no auth needed
+150 info attempt registry request try #1 at 11:31:14 AM
+151 verbose etag W/"2c96e1d02927d44cab85380147b39124"
+152 verbose lastModified Tue, 25 May 2021 16:30:21 GMT
+153 http request GET https://registry.npmjs.org/pg
+154 verbose request uri https://registry.npmjs.org/pg-hstore
+155 verbose request no auth needed
+156 info attempt registry request try #1 at 11:31:14 AM
+157 verbose etag W/"89ddb73ef5e880ba71c0ea822b39671b"
+158 verbose lastModified Wed, 09 Jun 2021 15:27:07 GMT
+159 http request GET https://registry.npmjs.org/pg-hstore
+160 verbose request uri https://registry.npmjs.org/express
+161 verbose request no auth needed
+162 info attempt registry request try #1 at 11:31:14 AM
+163 verbose etag W/"a47ff3c035b18e4283d3ca6ff0bc96bb"
+164 verbose lastModified Wed, 09 Jun 2021 22:41:01 GMT
+165 http request GET https://registry.npmjs.org/express
+166 verbose request uri https://registry.npmjs.org/socket.io
+167 verbose request no auth needed
+168 info attempt registry request try #1 at 11:31:14 AM
+169 verbose etag W/"6712ac6f5a7f2050f34ec6afed93ed9e"
+170 verbose lastModified Mon, 17 May 2021 21:18:57 GMT
+171 http request GET https://registry.npmjs.org/socket.io
+172 verbose request uri https://registry.npmjs.org/uuid
+173 verbose request no auth needed
+174 info attempt registry request try #1 at 11:31:14 AM
+175 verbose etag W/"a0bfed242193d3de7dd9a015fbc3c4fa"
+176 verbose lastModified Fri, 28 May 2021 14:44:29 GMT
+177 http request GET https://registry.npmjs.org/uuid
+178 verbose request uri https://registry.npmjs.org/yup
+179 verbose request no auth needed
+180 info attempt registry request try #1 at 11:31:14 AM
+181 verbose etag W/"04dceb13486279124dd9e22391c7ea96"
+182 verbose lastModified Wed, 10 Mar 2021 03:27:51 GMT
+183 http request GET https://registry.npmjs.org/yup
+184 verbose request uri https://registry.npmjs.org/sequelize
+185 verbose request no auth needed
+186 info attempt registry request try #1 at 11:31:14 AM
+187 verbose etag W/"a02e6efdc9c7b7ec9ed29c42c40cf960"
+188 verbose lastModified Tue, 23 Mar 2021 01:59:37 GMT
+189 http request GET https://registry.npmjs.org/sequelize
+190 verbose request uri https://registry.npmjs.org/mongoose
+191 verbose request no auth needed
+192 info attempt registry request try #1 at 11:31:14 AM
+193 verbose etag W/"edc385a67089d5513bc18c0b308d4ba6"
+194 verbose lastModified Fri, 04 Jun 2021 18:58:10 GMT
+195 http request GET https://registry.npmjs.org/mongoose
+196 http 304 https://registry.npmjs.org/pg
+197 verbose headers { date: 'Sun, 13 Jun 2021 08:31:14 GMT',
+197 verbose headers   connection: 'keep-alive',
+197 verbose headers   'cf-ray': '65e9f624699db6de-KIV',
+197 verbose headers   age: '1509',
+197 verbose headers   'cache-control': 'public, max-age=300',
+197 verbose headers   etag: '"2c96e1d02927d44cab85380147b39124"',
+197 verbose headers   'last-modified': 'Tue, 25 May 2021 16:30:21 GMT',
+197 verbose headers   vary: 'Accept-Encoding',
+197 verbose headers   'cf-cache-status': 'HIT',
+197 verbose headers   'cf-request-id': '0aa6182ac70000b6de35b84000000001',
+197 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+197 verbose headers   server: 'cloudflare' }
+198 silly get cb [ 304,
+198 silly get   { date: 'Sun, 13 Jun 2021 08:31:14 GMT',
+198 silly get     connection: 'keep-alive',
+198 silly get     'cf-ray': '65e9f624699db6de-KIV',
+198 silly get     age: '1509',
+198 silly get     'cache-control': 'public, max-age=300',
+198 silly get     etag: '"2c96e1d02927d44cab85380147b39124"',
+198 silly get     'last-modified': 'Tue, 25 May 2021 16:30:21 GMT',
+198 silly get     vary: 'Accept-Encoding',
+198 silly get     'cf-cache-status': 'HIT',
+198 silly get     'cf-request-id': '0aa6182ac70000b6de35b84000000001',
+198 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+198 silly get     server: 'cloudflare' } ]
+199 verbose etag https://registry.npmjs.org/pg from cache
+200 verbose get saving pg to /home/parttimecourse/.npm/registry.npmjs.org/pg/.cache.json
+201 http 304 https://registry.npmjs.org/socket.io
+202 verbose headers { date: 'Sun, 13 Jun 2021 08:31:14 GMT',
+202 verbose headers   connection: 'keep-alive',
+202 verbose headers   'cf-ray': '65e9f6247e90b6ea-KIV',
+202 verbose headers   age: '1510',
+202 verbose headers   'cache-control': 'public, max-age=300',
+202 verbose headers   etag: '"6712ac6f5a7f2050f34ec6afed93ed9e"',
+202 verbose headers   'last-modified': 'Mon, 17 May 2021 21:18:57 GMT',
+202 verbose headers   vary: 'Accept-Encoding',
+202 verbose headers   'cf-cache-status': 'HIT',
+202 verbose headers   'cf-request-id': '0aa6182ad10000b6eadd9ae000000001',
+202 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+202 verbose headers   server: 'cloudflare' }
+203 silly get cb [ 304,
+203 silly get   { date: 'Sun, 13 Jun 2021 08:31:14 GMT',
+203 silly get     connection: 'keep-alive',
+203 silly get     'cf-ray': '65e9f6247e90b6ea-KIV',
+203 silly get     age: '1510',
+203 silly get     'cache-control': 'public, max-age=300',
+203 silly get     etag: '"6712ac6f5a7f2050f34ec6afed93ed9e"',
+203 silly get     'last-modified': 'Mon, 17 May 2021 21:18:57 GMT',
+203 silly get     vary: 'Accept-Encoding',
+203 silly get     'cf-cache-status': 'HIT',
+203 silly get     'cf-request-id': '0aa6182ad10000b6eadd9ae000000001',
+203 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+203 silly get     server: 'cloudflare' } ]
+204 verbose etag https://registry.npmjs.org/socket.io from cache
+205 verbose get saving socket.io to /home/parttimecourse/.npm/registry.npmjs.org/socket.io/.cache.json
+206 silly resolveWithNewModule pg@8.6.0 checking installable status
+207 silly cache add args [ 'pg@^8.6.0', null ]
+208 verbose cache add spec pg@^8.6.0
+209 silly cache add parsed spec Result {
+209 silly cache add   raw: 'pg@^8.6.0',
+209 silly cache add   scope: null,
+209 silly cache add   name: 'pg',
+209 silly cache add   rawSpec: '^8.6.0',
+209 silly cache add   spec: '>=8.6.0 <9.0.0',
+209 silly cache add   type: 'range' }
+210 silly addNamed pg@>=8.6.0 <9.0.0
+211 verbose addNamed ">=8.6.0 <9.0.0" is a valid semver range for pg
+212 silly addNameRange { name: 'pg', range: '>=8.6.0 <9.0.0', hasData: false }
+213 silly mapToRegistry name pg
+214 silly mapToRegistry using default registry
+215 silly mapToRegistry registry https://registry.npmjs.org/
+216 silly mapToRegistry uri https://registry.npmjs.org/pg
+217 verbose addNameRange registry:https://registry.npmjs.org/pg not in flight; fetching
+218 verbose get https://registry.npmjs.org/pg not expired, no request
+219 silly addNameRange number 2 { name: 'pg', range: '>=8.6.0 <9.0.0', hasData: true }
+220 silly addNameRange versions [ 'pg',
+220 silly addNameRange   [ '0.4.1',
+220 silly addNameRange     '0.5.0',
+220 silly addNameRange     '0.5.1',
+220 silly addNameRange     '0.5.2',
+220 silly addNameRange     '0.5.3',
+220 silly addNameRange     '0.5.4',
+220 silly addNameRange     '0.5.5',
+220 silly addNameRange     '0.5.6',
+220 silly addNameRange     '0.5.7',
+220 silly addNameRange     '0.5.8',
+220 silly addNameRange     '0.6.0',
+220 silly addNameRange     '0.6.1',
+220 silly addNameRange     '0.6.2',
+220 silly addNameRange     '0.6.3',
+220 silly addNameRange     '0.6.4',
+220 silly addNameRange     '0.6.5',
+220 silly addNameRange     '0.6.6',
+220 silly addNameRange     '0.6.7',
+220 silly addNameRange     '0.6.8',
+220 silly addNameRange     '0.6.9',
+220 silly addNameRange     '0.6.10',
+220 silly addNameRange     '0.6.11',
+220 silly addNameRange     '0.6.12',
+220 silly addNameRange     '0.6.13',
+220 silly addNameRange     '0.6.14',
+220 silly addNameRange     '0.6.15',
+220 silly addNameRange     '0.6.16',
+220 silly addNameRange     '0.6.17',
+220 silly addNameRange     '0.6.18',
+220 silly addNameRange     '0.7.0',
+220 silly addNameRange     '0.7.1',
+220 silly addNameRange     '0.7.2',
+220 silly addNameRange     '0.8.0',
+220 silly addNameRange     '0.8.1',
+220 silly addNameRange     '0.8.2',
+220 silly addNameRange     '0.8.3',
+220 silly addNameRange     '0.8.4',
+220 silly addNameRange     '0.8.6',
+220 silly addNameRange     '0.8.7',
+220 silly addNameRange     '0.8.8',
+220 silly addNameRange     '0.9.0',
+220 silly addNameRange     '0.10.0',
+220 silly addNameRange     '0.10.2',
+220 silly addNameRange     '0.11.1',
+220 silly addNameRange     '0.11.2',
+220 silly addNameRange     '0.11.3',
+220 silly addNameRange     '0.12.0',
+220 silly addNameRange     '0.12.1',
+220 silly addNameRange     '0.12.3',
+220 silly addNameRange     '0.13.0',
+220 silly addNameRange     '0.13.1',
+220 silly addNameRange     '0.13.3',
+220 silly addNameRange     '0.14.0',
+220 silly addNameRange     '0.14.1',
+220 silly addNameRange     '0.15.0',
+220 silly addNameRange     '0.15.1',
+220 silly addNameRange     '1.0.0',
+220 silly addNameRange     '1.0.1',
+220 silly addNameRange     '1.0.2',
+220 silly addNameRange     '1.0.3',
+220 silly addNameRange     '1.0.4',
+220 silly addNameRange     '1.1.0',
+220 silly addNameRange     '1.1.1',
+220 silly addNameRange     '1.1.2',
+220 silly addNameRange     '1.1.3',
+220 silly addNameRange     '1.2.0',
+220 silly addNameRange     '1.3.0',
+220 silly addNameRange     '2.0.0',
+220 silly addNameRange     '2.1.0',
+220 silly addNameRange     '2.2.0',
+220 silly addNameRange     '2.3.0',
+220 silly addNameRange     '2.3.1',
+220 silly addNameRange     '2.4.0',
+220 silly addNameRange     '2.5.0',
+220 silly addNameRange     '2.5.1',
+220 silly addNameRange     '2.6.0',
+220 silly addNameRange     '2.6.1',
+220 silly addNameRange     '2.6.2',
+220 silly addNameRange     '2.7.0',
+220 silly addNameRange     '2.8.0',
+220 silly addNameRange     '2.8.1',
+220 silly addNameRange     '2.8.2',
+220 silly addNameRange     '2.8.3',
+220 silly addNameRange     '2.8.4',
+220 silly addNameRange     '2.8.5',
+220 silly addNameRange     '2.9.0',
+220 silly addNameRange     '2.10.0',
+220 silly addNameRange     '2.11.0',
+220 silly addNameRange     '2.11.1',
+220 silly addNameRange     '3.0.2',
+220 silly addNameRange     '3.0.3',
+220 silly addNameRange     '3.1.0',
+220 silly addNameRange     '3.2.0',
+220 silly addNameRange     '3.3.0',
+220 silly addNameRange     '3.4.0',
+220 silly addNameRange     '3.4.1',
+220 silly addNameRange     '3.4.2',
+220 silly addNameRange     '3.4.3',
+220 silly addNameRange     '3.4.4',
+220 silly addNameRange     '3.4.5',
+220 silly addNameRange     ... 109 more items ] ]
+221 silly addNamed pg@8.6.0
+222 verbose addNamed "8.6.0" is a plain semver version for pg
+223 verbose stack Error: Missing required argument #1
+223 verbose stack     at andLogAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:31:3)
+223 verbose stack     at fetchPackageMetadata (/usr/share/npm/lib/fetch-package-metadata.js:51:22)
+223 verbose stack     at resolveWithNewModule (/usr/share/npm/lib/install/deps.js:456:12)
+223 verbose stack     at /usr/share/npm/lib/install/deps.js:457:7
+223 verbose stack     at /usr/share/npm/node_modules/iferr/index.js:13:50
+223 verbose stack     at /usr/share/npm/lib/fetch-package-metadata.js:37:12
+223 verbose stack     at addRequestedAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:82:5)
+223 verbose stack     at returnAndAddMetadata (/usr/share/npm/lib/fetch-package-metadata.js:117:7)
+223 verbose stack     at pickVersionFromRegistryDocument (/usr/share/npm/lib/fetch-package-metadata.js:134:20)
+223 verbose stack     at /usr/share/npm/node_modules/iferr/index.js:13:50
+224 verbose cwd /home/parttimecourse/Documents/VSProjects/project_pd20202/squadhelp/server
+225 error Linux 5.4.0-64-generic
+226 error argv "/usr/bin/node" "/usr/bin/npm" "install"
+227 error node v8.10.0
+228 error npm  v3.5.2
+229 error code EMISSINGARG
+230 error typeerror Error: Missing required argument #1
+230 error typeerror     at andLogAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:31:3)
+230 error typeerror     at fetchPackageMetadata (/usr/share/npm/lib/fetch-package-metadata.js:51:22)
+230 error typeerror     at resolveWithNewModule (/usr/share/npm/lib/install/deps.js:456:12)
+230 error typeerror     at /usr/share/npm/lib/install/deps.js:457:7
+230 error typeerror     at /usr/share/npm/node_modules/iferr/index.js:13:50
+230 error typeerror     at /usr/share/npm/lib/fetch-package-metadata.js:37:12
+230 error typeerror     at addRequestedAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:82:5)
+230 error typeerror     at returnAndAddMetadata (/usr/share/npm/lib/fetch-package-metadata.js:117:7)
+230 error typeerror     at pickVersionFromRegistryDocument (/usr/share/npm/lib/fetch-package-metadata.js:134:20)
+230 error typeerror     at /usr/share/npm/node_modules/iferr/index.js:13:50
+231 error typeerror This is an error with npm itself. Please report this error at:
+231 error typeerror     <http://github.com/npm/npm/issues>
+232 verbose exit [ 1, true ]
