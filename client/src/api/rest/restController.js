@@ -3,8 +3,40 @@ import http from '../interceptor';
 export const registerRequest = (data) => http.post('registration', data);
 export const loginRequest = (data) => http.post('login', data);
 export const getUser = () => http.post('getUser');
+
 export const updateContest = (data) =>
   http.put(`/contests/${data.contestId}`, data);
+
+export const getCustomersContests = (data) =>
+  http.get(`customersContests?limit=${data.limit}&offset: ${data.offset},`, {
+    headers: {
+      status: data.contestStatus,
+    },
+  });
+
+export const getActiveContests = ({
+  offset,
+  limit,
+  typeIndex,
+  contestId,
+  industry,
+  awardSort,
+  ownEntries,
+}) =>
+  http.get(
+    `/contests?offset=${offset}&limit=${limit}
+              &typeIndex=${typeIndex}&contestId=${contestId}
+              &industry=${industry}&awardSort=${awardSort}
+              &ownEntries=${ownEntries}`
+  );
+
+export const getContestById = ({ contestId }) =>
+  http.get(`/contests/:${contestId}`, {
+    headers: {
+      contestId: contestId,
+    },
+  });
+
 export const setNewOffer = (data) => http.post('setNewOffer', data);
 export const setOfferStatus = (data) => http.post('setOfferStatus', data);
 export const downloadContestFile = (data) =>
@@ -27,39 +59,3 @@ export const deleteCatalog = (data) => http.post('deleteCatalog', data);
 export const removeChatFromCatalog = (data) =>
   http.post('removeChatFromCatalog', data);
 export const changeCatalogName = (data) => http.post('updateNameCatalog', data);
-export const getCustomersContests = (data) =>
-  http.post(
-    'getCustomersContests',
-    { limit: data.limit, offset: data.offset },
-    {
-      headers: {
-        status: data.contestStatus,
-      },
-    }
-  );
-
-export const getActiveContests = ({
-  offset,
-  limit,
-  typeIndex,
-  contestId,
-  industry,
-  awardSort,
-  ownEntries,
-}) =>
-  http.get('/contests', {
-    offset,
-    limit,
-    typeIndex,
-    contestId,
-    industry,
-    awardSort,
-    ownEntries,
-  });
-
-export const getContestById = ({ contestId }) =>
-  http.get(`/contests/:${contestId}`, {
-    headers: {
-      contestId: contestId,
-    },
-  });

@@ -5,21 +5,18 @@ const checkToken = require('../middlewares/checkToken');
 const upload = require('../utils/fileUpload');
 const contestRouter = Router();
 contestRouter.get(
-  '/',
-  checkToken.checkToken,
+  '/creativesContests',
   basicMiddlewares.onlyForCreative,
   contestController.getContests
 );
 // /api/contests
 contestRouter.get(
   '/:contestId',
-  checkToken.checkToken,
   basicMiddlewares.canGetContest,
   contestController.getContestById
 );
 contestRouter.put(
   '/:contestId',
-  checkToken.checkToken,
   upload.updateContestFile,
   contestController.updateContest
 );
