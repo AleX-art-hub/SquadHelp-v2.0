@@ -1,8 +1,11 @@
-const bd = require('../../models');
+const {
+  Contests, 
+  Offers,
+} = require('../../models');
 const ServerError = require('../../errors/ServerError');
 
 module.exports.updateContest = async (data, predicate, transaction) => {
-  const [updatedCount, [updatedContest]] = await bd.Contests.update(data,
+  const [updatedCount, [updatedContest]] = await Contests.update(data,
     { where: predicate, returning: true, transaction });
   if (updatedCount !== 1) {
     throw new ServerError('cannot update Contest');
@@ -12,7 +15,7 @@ module.exports.updateContest = async (data, predicate, transaction) => {
 };
 
 module.exports.updateContestStatus = async (data, predicate, transaction) => {
-  const updateResult = await bd.Contests.update(data,
+  const updateResult = await Contests.update(data,
     { where: predicate, returning: true, transaction });
   if (updateResult[ 0 ] < 1) {
     throw new ServerError('cannot update Contest');
@@ -22,7 +25,7 @@ module.exports.updateContestStatus = async (data, predicate, transaction) => {
 };
 
 module.exports.updateOffer = async (data, predicate, transaction) => {
-  const [updatedCount, [updatedOffer]] = await bd.Offers.update(data,
+  const [updatedCount, [updatedOffer]] = await Offers.update(data,
     { where: predicate, returning: true, transaction });
   if (updatedCount !== 1) {
     throw new ServerError('cannot update offer!');
@@ -32,7 +35,7 @@ module.exports.updateOffer = async (data, predicate, transaction) => {
 };
 
 module.exports.updateOfferStatus = async (data, predicate, transaction) => {
-  const result = await bd.Offers.update(data,
+  const result = await Offers.update(data,
     { where: predicate, returning: true, transaction });
   if (result[ 0 ] < 1) {
     throw new ServerError('cannot update offer!');
@@ -42,7 +45,7 @@ module.exports.updateOfferStatus = async (data, predicate, transaction) => {
 };
 
 module.exports.createOffer = async (data) => {
-  const result = await bd.Offers.create(data);
+  const result = await Offers.create(data);
   if (!result) {
     throw new ServerError('cannot create new Offer');
   } else {
