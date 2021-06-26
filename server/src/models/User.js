@@ -1,3 +1,7 @@
+const {
+  permissions: {role},
+} = require('../config/app');
+
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
     'Users',

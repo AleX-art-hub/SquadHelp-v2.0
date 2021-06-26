@@ -1,11 +1,19 @@
 const yup = require('yup');
+const {
+  permissions: {role},
+} =require('../config/app');
+
+const passwordRule = [
+  /(?=.*?\d)(?=.*?[A-Z])(?=.*?[a-z])^.{8,64}$/,
+  'Your password must be at least 8 characters and include at least on lowercase letter, one uppercase letter, one a number'
+];
 
 module.exports.registrationSchem = yup.object().shape({
   firstName: yup.string().required().min(1),
   lastName: yup.string().required().min(1),
   displayName: yup.string().required().min(1),
   email: yup.string().email().required().min(4),
-  password: yup.string().required().min(1),
+  password: yup.string().matches(...passwordRule).required(),
   role: yup.string().matches(/(customer|creator)/).required(),
 });
 

@@ -1,3 +1,6 @@
+const {
+  permissions: {roles},
+} = require('../config/app');
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
