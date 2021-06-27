@@ -1,5 +1,5 @@
 const {
-  permissions: {role},
+  permissions: { roles },
 } = require('../config/app');
 
 module.exports = (sequelize, DataTypes) => {
@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: 'anon.png',
       },
       role: {
-        type: DataTypes.ENUM('customer', 'creator'),
+        type: DataTypes.STRING,
         allowNull: false,
       },
       balance: {
@@ -69,6 +69,10 @@ module.exports = (sequelize, DataTypes) => {
     User.hasMany(models.Offer, { foreignKey: 'userId', targetKey: 'id' });
     User.hasMany(models.Contests, { foreignKey: 'userId', targetKey: 'id' });
     User.hasMany(models.Ratings, { foreignKey: 'userId', targetKey: 'id' });
+    User.hasMany(models.TransactionHistory, {
+      foreignKey: 'userId',
+      targetKey: 'id',
+    });
   };
 
   return User;

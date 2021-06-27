@@ -1,11 +1,11 @@
 const yup = require('yup');
 const {
-  permissions: {role},
-} =require('../config/app');
+  permissions: { roles },
+} = require('../config/app');
 
 const passwordRule = [
   /(?=.*?\d)(?=.*?[A-Z])(?=.*?[a-z])^.{8,64}$/,
-  'Your password must be at least 8 characters and include at least on lowercase letter, one uppercase letter, one a number'
+  'Your password must be at least 8 characters and include at least one lowercase letter , one uppercase letter , one a number',
 ];
 
 module.exports.registrationSchem = yup.object().shape({
@@ -13,8 +13,11 @@ module.exports.registrationSchem = yup.object().shape({
   lastName: yup.string().required().min(1),
   displayName: yup.string().required().min(1),
   email: yup.string().email().required().min(4),
-  password: yup.string().matches(...passwordRule).required(),
-  role: yup.string().matches(/(customer|creator)/).required(),
+  password: yup
+    .string()
+    .matches(...passwordRule)
+    .required(),
+  role: yup.string().oneOf(roles).required(),
 });
 
 module.exports.loginSchem = yup.object().shape({
@@ -23,7 +26,10 @@ module.exports.loginSchem = yup.object().shape({
 });
 
 module.exports.contestSchem = yup.object().shape({
-  contestType: yup.string().matches(/(name|logo|tagline)/).required(),
+  contestType: yup
+    .string()
+    .matches(/(name|logo|tagline)/)
+    .required(),
   fileName: yup.string().min(1),
   originalFileName: yup.string().min(1),
   title: yup.string().required().min(1),
@@ -36,5 +42,3 @@ module.exports.contestSchem = yup.object().shape({
   typeOfTagline: yup.string().min(1),
   brandStyle: yup.string().min(1),
 });
-
-
