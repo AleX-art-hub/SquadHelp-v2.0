@@ -352,3 +352,15 @@ module.exports.getContests = (req, res, next) => {
       next(new ServerError());
     });
 };
+
+module.exports.getOffersFiles = async (req, res, next) => {
+  try {
+    const {
+      body: { queryFilter },
+    } = req;
+    const result = await contestQueries.updateOfferStatus(queryFilter);
+    res.send(result);
+  } catch (e) {
+    next(e);
+  }
+};

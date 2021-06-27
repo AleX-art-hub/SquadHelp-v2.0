@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import CONSTANTS from '../../constants';
 import { Link } from 'react-router-dom';
 import styles from './TransactionPage.sass';
+
 const data = [
   {
     id: 1,
@@ -32,6 +33,7 @@ const data = [
     sum: 600,
   },
 ];
+
 const TransactionPage = (props) => {
   return (
     <>

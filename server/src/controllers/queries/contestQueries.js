@@ -1,12 +1,12 @@
-const {
-  Contests, 
-  Offers,
-} = require('../../models');
+const { Contests, Offers } = require('../../models');
 const ServerError = require('../../errors/ServerError');
 
 module.exports.updateContest = async (data, predicate, transaction) => {
-  const [updatedCount, [updatedContest]] = await Contests.update(data,
-    { where: predicate, returning: true, transaction });
+  const [updatedCount, [updatedContest]] = await Contests.update(data, {
+    where: predicate,
+    returning: true,
+    transaction,
+  });
   if (updatedCount !== 1) {
     throw new ServerError('cannot update Contest');
   } else {
@@ -15,18 +15,24 @@ module.exports.updateContest = async (data, predicate, transaction) => {
 };
 
 module.exports.updateContestStatus = async (data, predicate, transaction) => {
-  const updateResult = await Contests.update(data,
-    { where: predicate, returning: true, transaction });
-  if (updateResult[ 0 ] < 1) {
+  const updateResult = await Contests.update(data, {
+    where: predicate,
+    returning: true,
+    transaction,
+  });
+  if (updateResult[0] < 1) {
     throw new ServerError('cannot update Contest');
   } else {
-    return updateResult[ 1 ][ 0 ].dataValues;
+    return updateResult[1][0].dataValues;
   }
 };
 
 module.exports.updateOffer = async (data, predicate, transaction) => {
-  const [updatedCount, [updatedOffer]] = await Offers.update(data,
-    { where: predicate, returning: true, transaction });
+  const [updatedCount, [updatedOffer]] = await Offers.update(data, {
+    where: predicate,
+    returning: true,
+    transaction,
+  });
   if (updatedCount !== 1) {
     throw new ServerError('cannot update offer!');
   } else {
@@ -35,12 +41,15 @@ module.exports.updateOffer = async (data, predicate, transaction) => {
 };
 
 module.exports.updateOfferStatus = async (data, predicate, transaction) => {
-  const result = await Offers.update(data,
-    { where: predicate, returning: true, transaction });
-  if (result[ 0 ] < 1) {
+  const result = await Offers.update(data, {
+    where: predicate,
+    returning: true,
+    transaction,
+  });
+  if (result[0] < 1) {
     throw new ServerError('cannot update offer!');
   } else {
-    return result[ 1 ];
+    return result[1];
   }
 };
 
@@ -50,5 +59,14 @@ module.exports.createOffer = async (data) => {
     throw new ServerError('cannot create new Offer');
   } else {
     return result.get({ plain: true });
+  }
+};
+
+module.exports.queryOffersFiles = async (queryObj) => {
+  const result = await Offers.findAll(queryObj);
+  if (result.length !== 0) {
+    return result;
+  } else {
+    throw new ServerError('Offers not found');
   }
 };

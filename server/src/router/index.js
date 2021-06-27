@@ -99,3 +99,7 @@ router.post('/deleteCatalog', chatController.deleteCatalog);
 router.post('/getCatalogs', chatController.getCatalogs);
 
 module.exports = router;
+
+// Offfers
+
+router.get('/getOffersFiles', contestController.getOffersFiles);

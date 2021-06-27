@@ -17,7 +17,7 @@ const TransactionTable = (props) => {
         {data.map((transaction) => (
           <tr key={transaction.id}>
             <td>{transaction.id}</td>
-            <td>{transaction.type}</td>
+            <td>{transaction.typeOperation}</td>
             <td>{`${transaction.sum}`}</td>
           </tr>
         ))}
@@ -30,10 +30,11 @@ TransactionTable.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
-      type: PropTypes.string,
+      typeOperation: PropTypes.string,
       sum: PropTypes.number,
     })
   ),
 };
+// typeOperation
 
 export default TransactionTable;
