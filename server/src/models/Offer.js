@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Offer.associate = function (models) {
-    Offers.belongsTo(models.Users, {
+    Offer.belongsTo(models.Users, {
       foreignKey: 'userId',
       targetKey: 'id',
     });
