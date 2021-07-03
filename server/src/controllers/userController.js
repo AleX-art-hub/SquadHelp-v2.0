@@ -92,7 +92,7 @@ function getQuery(offerId, userId, mark, isFirst, transaction) {
         mark,
         userId,
       },
-      transaction
+      transaction,
     );
   const getUpdateQuery = () =>
     ratingQueries.updateRating({ mark }, { offerId, userId }, transaction);
@@ -163,7 +163,7 @@ module.exports.payment = async (req, res, next) => {
           ],
         },
       },
-      transaction
+      transaction,
     );
     const orderId = uuid();
     req.body.contests.forEach((contest, index) => {
@@ -196,7 +196,7 @@ module.exports.updateUser = async (req, res, next) => {
     }
     const updatedUser = await userQueries.updateUser(
       req.body,
-      req.tokenData.userId
+      req.tokenData.userId,
     );
     res.send({
       firstName: updatedUser.firstName,
@@ -220,7 +220,7 @@ module.exports.cashout = async (req, res, next) => {
     const updatedUser = await userQueries.updateUser(
       { balance: sequelize.literal('balance - ' + req.body.sum) },
       req.tokenData.userId,
-      transaction
+      transaction,
     );
     await bankQueries.updateBankBalance(
       {
@@ -238,7 +238,7 @@ module.exports.cashout = async (req, res, next) => {
           CONSTANTS.SQUADHELP_BANK_EXPIRY
         }' AND "cvc"='${CONSTANTS.SQUADHELP_BANK_CVC}'
                     THEN "balance"-${req.body.sum}
-                 END
+                  END
                 `),
       },
       {
@@ -249,7 +249,7 @@ module.exports.cashout = async (req, res, next) => {
           ],
         },
       },
-      transaction
+      transaction,
     );
     transaction.commit();
     res.send({ balance: updatedUser.balance });
