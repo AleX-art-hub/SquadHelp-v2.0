@@ -12,10 +12,12 @@ module.exports = {
         userId: {
           type: Sequelize.INTEGER,
           allowNull: false,
+          /*
           references: {
             model: 'Users',
             key: 'id',
           },
+          */
         },
         typeOperation: {
           type: Sequelize.ENUM('income', 'expense'),
@@ -24,6 +26,19 @@ module.exports = {
         sum: {
           type: Sequelize.DECIMAL,
           allowNull: false,
+          validate: {
+            min: 0,
+          },
+        },
+        createdAt: {
+          allowNull: false,
+          type: Sequelize.DATE,
+          defaultValue: Sequelize.NOW,
+        },
+        updatedAt: {
+          allowNull: false,
+          type: Sequelize.DATE,
+          defaultValue: Sequelize.NOW,
         },
       })
       .then(() =>

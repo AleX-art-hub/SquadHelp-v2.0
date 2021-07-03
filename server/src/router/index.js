@@ -100,6 +100,6 @@ router.post('/getCatalogs', chatController.getCatalogs);
 
 module.exports = router;
 
-// Offfers
+// offers
 
 router.get('/getOffersFiles', contestController.getOffersFiles);

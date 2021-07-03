@@ -71,7 +71,7 @@ module.exports = (sequelize, DataTypes) => {
     User.hasMany(models.Ratings, { foreignKey: 'userId', targetKey: 'id' });
     User.hasMany(models.Transactions, {
       foreignKey: 'userId',
-      targetKey: 'id',
+      //targetKey: 'id',
     });
   };
 
