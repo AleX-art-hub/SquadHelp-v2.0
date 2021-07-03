@@ -24,7 +24,7 @@ module.exports = {
           balance: 100,
         },
       ],
-      {}
+      {},
     );
   },
   down: async (queryInterface, Sequelize) => {

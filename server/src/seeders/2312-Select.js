@@ -124,10 +124,10 @@ module.exports = {
           describe: 'Builders',
         },
       ],
-      {}
+      {},
     );
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete('Selects', null, {});
-  },
-};
+  };
+}

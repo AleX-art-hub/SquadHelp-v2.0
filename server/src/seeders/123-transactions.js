@@ -29,7 +29,7 @@ module.exports = {
           sum: 300,
         },
       ],
-      {}
+      {},
     );
   },
   down: async (queryInterface, Sequelize) => {

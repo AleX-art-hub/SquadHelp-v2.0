@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       timestamps: false,
-    }
+    },
   );
 
   User.associate = function (models) {

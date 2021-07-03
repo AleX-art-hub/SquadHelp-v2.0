@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       timestamps: true,
-    }
+    },
   );
   Transactions.associate = function (models) {
     Transactions.belongsTo(models.Users, {
