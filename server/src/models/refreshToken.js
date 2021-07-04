@@ -1,34 +1,38 @@
 'use strict';
-const {Model} = require('sequelize');
-const { sequelize } = require('.');
-const { refreshAuth } = require('../controllers/authController');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    class RefreshToken extends Model{
-        static associate(model){
-            RefreshToken.belongsTo(User, {
-                foreignKey: 'userId',
-            });
-        }
+  class RefreshToken extends Model {
+    static associate({ User }) {
+      RefreshToken.belongsTo(User, {
+        foreignKey: 'userId',
+      });
     }
-    RefreshToken.init({
-        UserId: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'Users',
-            },
-            
+  }
+  RefreshToken.init(
+    {
+      userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Users',
         },
-        token: {
-            type: DataTypes.TEXT,
-            unique: true,
-        },
-        userAgent: DataTypes.STRING,
-        fingerprint: DataTypes.STRING,
+      },
+      token: {
+        type: DataTypes.UUID,
+        allowNull: false,
+        unique: true,
+      },
+      expiredIn: {
+        type: DataTypes.DATE,
+        allowNull: false,
+      },
+      userAgent: DataTypes.STRING,
+      fingerprint: DataTypes.STRING,
     },
     {
-        sequelize,
-        modelName: 'RefreshToken',
-    });
-    return RefreshToken;
+      sequelize,
+      modelName: 'RefreshToken',
+    }
+  );
+  return RefreshToken;
 };
