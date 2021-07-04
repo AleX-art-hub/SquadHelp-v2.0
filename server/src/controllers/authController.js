@@ -19,5 +19,5 @@ exports.signInUser = async (req, res, next) => {
     }
 };
 
-exports.signInUser = async (req, res, next) => {};
+exports.signUpUser = async (req, res, next) => {};
 exports.refreshAuth = async (req, res, next) => {};
