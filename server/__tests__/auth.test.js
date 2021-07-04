@@ -5,7 +5,8 @@
 const regeneratorRuntime = require('regenerator-runtime');
 const request = require('supertest');
 const { createApp } = require('../src/app');
-const { User, sequelize } = require('../src/models');
+const { User } = require('../src/models');
+const { sequelize } =require('../src/models')
 const yup = require('yup');
 const CONSTANTS = require('../src/constants');
 const util = require('util');
